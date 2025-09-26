@@ -1,0 +1,433 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('back.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.contact-us {
+  background-color: #faf3e0;
+  padding: 30px;
+  border-radius: 15px;
+  width: 420px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out;
+  font-weight: bold;
+  
+}
+
+.contact-us:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-us h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: deeppink;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: b;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+  color:yellow;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  color:yellow;
+}
+
+.contact-item p {
+  margin: 0;
+}
+/* Overlay to darken the background image for better readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.header-content h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  margin: 10px 0 30px;
+  font-style: italic;
+  color: #fff176;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 20px;
+  background-color: rgba(255, 235, 59, 0.8);
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #fdd835;
+  transform: scale(1.05);
+}
+/* Example to ensure sections are visible */
+.comments-section, .contact-us {
+  display: block; /* Ensure these sections are set to display block or as required */
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+}
+
+.hero-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.featured-meme {
+  position: relative;
+  display: inline-block;
+}
+
+.featured-meme img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-meme img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.7);
+}
+
+.featured-meme p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #ffeb3b;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Meme Gallery */
+.meme-gallery {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.meme {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meme img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.meme p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.meme:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.meme:hover img {
+  transform: scale(1.1);
+}
+
+/* Lightbox (Full-Size Image Modal) */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 15px;
+}
+
+#caption {
+  margin: 15px;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ccc;
+}
+
+/* Comment Section */
+.comments-section {
+  padding: 30px;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #faf3e0;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comments-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color:mediumpurple ;
+}
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  font-size: 1.1rem;
+  color: #ffeb3b;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+form input, form textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #ffeb3b;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #ffc107;
+}
+
+form button {
+  padding: 15px;
+  background-color: #ffeb3b;
+  border: none;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+#formSuccessMessage {
+  margin-top: 15px;
+  color: #4caf50;
+  font-weight: bold;
+  text-align: center;
+}
+/* Comment Display Section */
+.comments-display {
+  margin-top: 30px;
+}
+
+.comments-display h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: maroon;
+}
+
+#commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment strong {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  display: block;
+}
+/* About and Contact Sections */
+
+
+.social-media a {
+  color: #ffeb3b;
+  margin: 0 15px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #ffc107;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffeb3b;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 40px 20px;
+  }
+  
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header-content p {
+    font-size: 1.2rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  nav ul li a {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  
+  .featured-meme img {
+    width: 100%;
+  }
+  
+  .meme-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  form input, form textarea {
+    font-size: 0.9rem;
+  }
+  
+  form button {
+    font-size: 1rem;
+  }
+  
+  .social-media a {
+    font-size: 1.2rem;
+    margin: 0 10px;
+  }
+}
+
+
