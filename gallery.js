@@ -16,6 +16,7 @@ fetch("memes.json")
 
 /** Render gallery */
 function renderGallery() {
+  galleryContainer.innerHTML = ""; // skeleton গুলো clear করার জন্য
   memes.forEach((src, index) => {
     const item = document.createElement("div");
     item.className = "gallery-item";
@@ -29,20 +30,11 @@ function renderGallery() {
 }
 
 /** Lightbox structure */
-const lightbox = document.createElement("div");
-lightbox.className = "lightbox";
-lightbox.innerHTML = `
-  <span class="close">&times;</span>
-  <span class="prev">&#10094;</span>
-  <img class="lightbox-content" id="lightbox-img">
-  <span class="next">&#10095;</span>
-`;
-document.body.appendChild(lightbox);
-
-const lightboxImg = document.getElementById("lightbox-img");
-const closeBtn = lightbox.querySelector(".close");
-const nextBtn = lightbox.querySelector(".next");
-const prevBtn = lightbox.querySelector(".prev");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lb-image");
+const closeBtn = document.getElementById("lb-close");
+const nextBtn = document.getElementById("lb-next");
+const prevBtn = document.getElementById("lb-prev");
 
 /** Open lightbox at given index */
 function openLightbox(index) {

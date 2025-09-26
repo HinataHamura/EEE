@@ -9,12 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body>
+<body class="page-inner">
   
   <!-- Header Section -->
   <header>
     <div class="header-content">
+      <div class="title-logo">
       <h1>Department of EEE</h1>
+      <img src="logo.jpg" alt="EEE Logo" class="logo">
+    </div>
       <p>Emotions and Emotional Entertainment</p>
       <nav>
         <ul>
@@ -33,41 +36,14 @@
     <div class="hero-content">
       <h2>Meme of the Day</h2>
       <div class="featured-meme">
-        <img src="meme1.jpg" alt="Meme of the Day">
-        <p>When you realize finals are next week!</p>
+        <img src="images/meme1.jpg" alt="Meme of the Day">
+        <p>!!!!</p>
       </div>
     </div>
   </section>
   
-  <!-- Memes Gallery Section -->
-  <section id="gallery">
-    <div class="section-content">
-      <h2 style="color: #FF4E88; font-size: 1.8rem;">Memes Gallery</h2>
-      <div class="meme-gallery">
-        <div class="meme">
-          <img src="meme1.jpg" alt="Meme 1">
-          <p>When you thought the circuit would work but... it doesn’t.</p>
-        </div>
-        <div class="meme">
-          <img src="meme2.jpg" alt="Meme 2">
-          <p>When the professor asks a question and the whole class is silent.</p>
-        </div>
-        <div class="meme">
-          <img src="meme3.jpg" alt="Meme 3">
-          <p>Final year project: Expectations vs Reality.</p>
-        </div>
-        
-        <!-- Add more memes as needed -->
-      </div>
-    </div>
-  </section>
+  
  
-
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox">
-  <span class="close" onclick="closeLightbox()">&times;</span>
-  <img class="lightbox-content" id="fullImage">
-</div>
 
   <!-- About Us Section -->
   <section style="background-color:rgba(248, 237, 237, 0.8);" id="about">
@@ -121,12 +97,19 @@
       </div>
     </div>
   </section>
+
+  <!-- Logo Modal -->
+<div id="logoModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="logoImg">
+</div>
+
   
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Department of EEE - Emotions and Emotional Entertainment. All rights reserved.</p>
+    <p>&copy; 2025 Department of EEE - Emotions and Emotional Entertainment. All rights reserved.</p>
   </footer>
   
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
